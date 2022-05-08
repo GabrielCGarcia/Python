@@ -1,20 +1,12 @@
-from datetime import date
-ano = date.today().year
-bday = int(input('Veja em qual categoria você se enquadra abaixo\nDiga seu ano de nascimento: '))
-idade = ano - bday
-print('Se você nasceu no ano de {} você tem {} anos, sendo assim sua categoria é:'.format(bday, idade))
+r1 = float(input('Primeiro lado: '))
+r2 = float(input('Segundo lado: '))
+r3 = float(input('Terceiro lado: '))
 
-if idade <= 0 or idade >= 100:
-    print('Valor invalido, digite novamente por favor.')
-elif idade <= 9:
-    print('Categoria: MIRIM')
-elif idade <= 14:
-    print('Categoria: INFANTIL')
-elif idade <= 19:
-    print('Categoria: JUNIOR')
-elif idade <= 25:
-        print('Categoria: SÊNIOR')
-elif idade > 25:
-        print('Categoria: MASTER')
-if idade >= 1 and idade < 100:
-    print('Obrigado por consultar a sua categoria :)')
+if r1 == r2 == r3:
+    print('Seu triangulo é Equilátero!')
+elif r1 + r2 <= r3 or r1 + r3 <= r2 or r2 + r3 <= r1:
+    print('As retas informadas não podem fomar um triangulo!')
+elif r1 == r2 or r1 == r3 or r2 == r3:
+    print('Seu triangulo é Isósceles!')
+else:
+    print('Seu triangulo é Escaleno!')
