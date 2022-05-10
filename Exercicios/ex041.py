@@ -1,5 +1,6 @@
 from datetime import date
 ano = date.today().year
+print(ano)
 bday = int(input('Veja em qual categoria você se enquadra abaixo\nDiga seu ano de nascimento: '))
 idade = ano - bday
 print('Se você nasceu no ano de {} você tem {} anos, sendo assim sua categoria é:'.format(bday, idade))
